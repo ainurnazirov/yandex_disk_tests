@@ -41,8 +41,6 @@ class DiskPage(BasePage):
         self.click_element(self.FILE_NAME_INPUT)
         element = self.get_element(self.FILE_NAME_INPUT)
         self.driver.execute_script("arguments[0].value = arguments[1];", element, '')
-
-        element.clear()
         element.send_keys(file_name)
         self.click_element(self.SAVE_BUTTON)
 
